@@ -57,11 +57,11 @@ Finally! First copy the the config folder into place.
 
 Then, download `tunnelbear@.service` and `tunnelbear` from this repo, and:
 
-1. Copy the systemd unit file into place.
+Copy the systemd unit file into place.
 
 	sudo cp tunnelbear@.service /usr/lib/systemd/system/
 
-2. Copy the tunnelbear script into place.
+Copy the tunnelbear script into place.
 
 	sudo cp tunnelbear /usr/local/bin/
 
