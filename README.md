@@ -31,12 +31,14 @@ Create the auth file in the same folder as the config files.
 	vi tunnelbear.d/tb-auth.key
 
 The auth file is two lines only. This is the same information that is used to log into the TunnelBear website.
+
 	email
 	password
 
 ### Configuration file
 
 Copy one of the ovpn files to your own file, e.g. aus.ovpn, add following two lines:
+
 	keepalive 10 30
 	auth-user-pass tb-auth.key
 
