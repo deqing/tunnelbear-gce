@@ -30,21 +30,21 @@ Create the auth file in the same folder as the config files.
 	touch tunnelbear.d/tb-auth.key
 	vi tunnelbear.d/tb-auth.key
 
-The auth file is two lines only. This is the same information that is used to log into the TunnelBear website.
+The auth file is two lines only. This is the same information that is used to log into the TunnelBear website:
 
 	email
 	password
 
 ### Configuration file
 
-Copy one of the ovpn files to your own file, e.g. aus.ovpn, add following two lines:
+Copy one of the ovpn files to your own file, e.g. `aus.ovpn`, add following two lines:
 
 	keepalive 10 30
 	auth-user-pass tb-auth.key
 
 ### File permissions
 
-The files need to be owned by the root account, and not otherwise readable. Change the permissions, and then the ownership.
+The files need to be owned by the root account, and not otherwise readable. Change the permissions, and then the ownership:
 
 	chmod 600 tunnelbear.d/*
 	sudo chown root:root tunnelbear.d/*
@@ -55,11 +55,13 @@ Finally! First copy the the config folder into place.
 
 	sudo cp -r tunnelbear.d /etc/openvpn/
 
-Copy the systemd unit file into place.
+Then, download `tunnelbear@.service` and `tunnelbear` from this repo, and:
 
-	sudo cp tunnelbear\@.service /usr/lib/systemd/system/
+1. Copy the systemd unit file into place.
 
-Copy the tunnelbear script into place.
+	sudo cp tunnelbear@.service /usr/lib/systemd/system/
+
+2. Copy the tunnelbear script into place.
 
 	sudo cp tunnelbear /usr/local/bin/
 
